@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="welcome_title">Welcome to the ShoeStore!</string>
+    <string name="main_info">ShoeStore is all about footwear. We have been in the shoe business for over 130 years.
+        \n Yes, you read that correctly, over a century plus a quarter.
+        Today we are proud to offer our best customer service to patrons both online here at ShoeStore and in our shoe stores in the Indianapolis, IN area. </string>
+    <string name="email">Email</string>
+    <string name="text_your_email_address">Text your email address</string>
+    <string name="password">Password</string>
+    <string name="text_your_password">Text your password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="instruction">Go to Instruction</string>
+    <string name="empty_imput">Empty email or password!</string>
+    <string name="instruction_title">Instruction</string>
+    <string name="first_instruction">You will see a list of available shoes. You can choose any of them.</string>
+    <string name="second_instruction">Click on the shoes which you like to see more details and order it.</string>
+    <string name="shoesList">Go to store</string>
+    <string name="log_out">Log out</string>
+    <string name="name">Name:</string>
+    <string name="size">Size:</string>
+    <string name="company">Company:</string>
+    <string name="description">Description:</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
 </resources>
