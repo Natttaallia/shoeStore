@@ -1,14 +1,18 @@
 package com.udacity.shoestore.models
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import timber.log.Timber
 
 /**
  * @author Kulbaka Nataly
  * @date 22.07.2021
  */
 class ShoeListViewModel : ViewModel() {
+
+    private var _state = MutableLiveData<Boolean>()
+    val state: LiveData<Boolean>
+        get() = _state
 
     private val _shoesList = MutableLiveData<MutableList<Shoe>>()
     val shoesList: MutableLiveData<MutableList<Shoe>>
@@ -81,18 +85,9 @@ class ShoeListViewModel : ViewModel() {
         _shoesList.value?.add(Shoe(name, size, company, description))
     }
 
-    fun onSave(name: String, size: String, company: String, description: String) {
-        var sizeDouble = 0.0
-        try {
-            sizeDouble = when {
-                size.isEmpty() -> 0.0
-                size == "." -> 0.0
-                size == "-" -> -.0
-                else -> size.toDouble()
-            }
-        } catch (e: NumberFormatException) {
-            Timber.i(e)
-        }
-        createShoe(name, sizeDouble, company, description)
+    fun onSave(shoe: Shoe) {
+        _state.value = true
+        _shoesList.value?.add(shoe)
+        _state.value = false
     }
 }

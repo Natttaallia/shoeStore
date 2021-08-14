@@ -2,6 +2,15 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <data>
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.models.ShoeListViewModel"/>
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe"/>
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -59,6 +68,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:ems="10"
+            android:text="@={shoe.name}"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -72,6 +82,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:ems="10"
+            android:text="@={shoe.size}"
             android:inputType="numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -83,6 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:ems="10"
+            android:text="@={shoe.company}"
             android:inputType="textPersonName"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
@@ -98,6 +110,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:ems="10"
+            android:text="@={shoe.description}"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -124,6 +137,7 @@
             android:background="@color/colorPrimary"
             android:textColor="@android:color/white"
             android:text="@string/save"
+            android:onClick="@{() -> viewModel.onSave(shoe)}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/description_et" />
