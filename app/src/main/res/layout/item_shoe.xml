@@ -2,6 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!--I use ConstraintLayout here,
+    because the UI is complicated,
+    I need to constraint components, exactly the textViews and the background view.
+    It helps me to avoid having deep nesting-->
+
     <data>
         <variable
             name="shoeData"

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!--I use LinearLayout here,
+    because the UI is simple,
+    I can align all children in a single direction-->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
